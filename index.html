@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DCQE, Post-Selection &amp; AI — 3 Preprints, Lean 4.36 Proofs (66 Theorems) &amp; 12 Reproducible Experiments</title>
+  <meta name="description" content="Official research showcase for Fabien Pierret's three CERN-archived preprints on Heavy-Tail Q-DSR_nu, Autoregressive LLM Contextuality-by-Default, Minimax SIPS_infinity, and Welch-Superposition MIA Duality — backed by 66 machine-checked Lean 4.36 theorems (0 sorry, dual-agent audited) and 12 deterministic experiments." />
+  <link rel="canonical" href="https://fabien-pierret.github.io/dcqe-postselection-ai/" />
+  <link rel="alternate" type="text/plain" title="LLMs Machine-Readable Spec" href="./llms.txt" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://fabien-pierret.github.io/dcqe-postselection-ai/" />
+  <meta property="og:title" content="DCQE, Post-Selection & AI — Lean 4.36 Machine-Checked Research Suite (4 CERN DOIs)" />
+  <meta property="og:description" content="66 Lean 4.36 theorems (0 sorry, standard axioms only, dual-agent audited), 3 preprints, and 12 reproducible Python/MLX experiments separating genuine signal from post-selection mirages — zero quantum woo." />
+  <meta property="og:image" content="https://fabien-pierret.github.io/dcqe-postselection-ai/figures/fig10_quantum_overfitting_amplification_law.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="DCQE, Post-Selection & AI — 66 Lean 4.36 Theorems & 4 CERN DOIs" />
+  <meta name="twitter:description" content="Heavy-Tail Q-DSR_nu, Autoregressive LLM CbD Signaling Dichotomy, Minimax SIPS_infinity & Welch-MIA Duality. Strictly classical statistics & Euclidean geometry — zero quantum woo." />
+  <meta name="twitter:image" content="https://fabien-pierret.github.io/dcqe-postselection-ai/figures/fig10_quantum_overfitting_amplification_law.png" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://orcid.org/0009-0001-1223-2170",
+        "name": "Fabien Pierret",
+        "jobTitle": "Independent Researcher",
+        "sameAs": [
+          "https://orcid.org/0009-0001-1223-2170",
+          "https://github.com/fabien-pierret",
+          "https://wallstreetdebug.com",
+          "https://x.com/Jeff2k3y"
+        ]
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "dcqe-postselection-ai",
+        "description": "Self-contained Lean 4.36 (66 machine-checked public theorems, 0 sorry, dual-agent audited) and Python/MLX deterministic verification suite for Heavy-Tail Q-DSR_nu, Autoregressive LLM Contextuality-by-Default, Minimax SIPS_infinity, and Welch-Superposition MIA Duality.",
+        "codeRepository": "https://github.com/fabien-pierret/dcqe-postselection-ai",
+        "url": "https://fabien-pierret.github.io/dcqe-postselection-ai/",
+        "license": "https://opensource.org/licenses/MIT",
+        "programmingLanguage": ["Lean 4", "Python"],
+        "version": "1.1.0",
+        "identifier": "https://doi.org/10.5281/zenodo.24591062",
+        "author": { "@id": "https://orcid.org/0009-0001-1223-2170" }
+      },
+      {
+        "@type": "ScholarlyArticle",
+        "name": "The Quantum Overfitting Amplification Theorem and Heavy-Tail Quantum-Adjusted Deflated Sharpe Ratio (Q-DSR_nu)",
+        "author": { "@id": "https://orcid.org/0009-0001-1223-2170" },
+        "identifier": "https://doi.org/10.5281/zenodo.24591340",
+        "sameAs": "https://zenodo.org/records/24591340",
+        "url": "https://fabien-pierret.github.io/dcqe-postselection-ai/papers/Article_1_PRX_Quantum.pdf",
+        "license": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "@type": "ScholarlyArticle",
+        "name": "The Contextuality-Signaling Dichotomy in Autoregressive Large Language Models: Causal-Mask Absorption, Semantic Frustration Phase Transition, and Correlated Effective Multiplicity",
+        "author": { "@id": "https://orcid.org/0009-0001-1223-2170" },
+        "identifier": "https://doi.org/10.5281/zenodo.24591378",
+        "sameAs": "https://zenodo.org/records/24591378",
+        "url": "https://fabien-pierret.github.io/dcqe-postselection-ai/papers/Article_2_Nature_Machine_Intelligence.pdf",
+        "license": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "@type": "ScholarlyArticle",
+        "name": "Minimax Impossibility of Linear Post-Selection Auditors (SIPS_infinity) and Analytical Coupling Between Welch Superposition and Membership Inference (V_AI^2 + D_MIA^2 <= 1)",
+        "author": { "@id": "https://orcid.org/0009-0001-1223-2170" },
+        "identifier": "https://doi.org/10.5281/zenodo.24591422",
+        "sameAs": "https://zenodo.org/records/24591422",
+        "url": "https://fabien-pierret.github.io/dcqe-postselection-ai/papers/Article_3_ICML_JMLR.pdf",
+        "license": "https://creativecommons.org/licenses/by/4.0/"
+      }
+    ]
+  }
+  </script>
+  <style>
+    :root {
+      --bg: #070b14;
+      --surface: #0e1628;
+      --surface-2: #121d34;
+      --border: #1e2d4a;
+      --border-hi: #2f4670;
+      --text: #eef3fb;
+      --muted: #98a9c8;
+      --dim: #6c7fa3;
+      --cyan: #22d3ee;
+      --emerald: #10b981;
+      --amber: #f59e0b;
+      --violet: #a78bfa;
+      --mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: radial-gradient(1100px 560px at 12% -5%, rgba(34,211,238,0.09), transparent 60%),
+                  radial-gradient(900px 480px at 88% 0%, rgba(16,185,129,0.07), transparent 55%),
+                  var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      font-size: 15px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--cyan); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 1120px; margin: 0 auto; padding: 34px 22px 70px; }
+    .eyebrow {
+      display: inline-flex; flex-wrap: wrap; gap: 8px; align-items: center;
+      font-family: var(--mono); font-size: 11.5px; font-weight: 700; letter-spacing: 0.05em;
+      text-transform: uppercase; color: var(--emerald); margin-bottom: 12px;
+    }
+    .pill {
+      padding: 3px 9px; border-radius: 999px;
+      border: 1px solid rgba(16,185,129,0.4); background: rgba(16,185,129,0.12); color: #34d399;
+    }
+    .pill.cyan { border-color: rgba(34,211,238,0.38); background: rgba(34,211,238,0.1); color: #67e8f9; }
+    h1 {
+      margin: 0 0 12px; font-size: clamp(26px, 3.6vw, 40px); font-weight: 800;
+      letter-spacing: -0.03em; line-height: 1.14;
+    }
+    .lead { margin: 0 0 20px; color: var(--muted); max-width: 880px; font-size: 15.5px; }
+    .meta-strip {
+      display: flex; flex-wrap: wrap; gap: 8px; align-items: center;
+      padding: 12px 14px; border-radius: 10px; background: var(--surface); border: 1px solid var(--border);
+      margin-bottom: 18px;
+    }
+    .badge {
+      display: inline-flex; border-radius: 6px; overflow: hidden;
+      font-family: var(--mono); font-size: 11px; border: 1px solid var(--border-hi);
+    }
+    .badge .k { background: #16223a; color: #cbd5e1; padding: 3px 8px; font-weight: 600; }
+    .badge .v { background: #0b3954; color: #67e8f9; padding: 3px 8px; font-weight: 700; }
+    .badge.lean .v { background: #064e3b; color: #6ee7b7; }
+    .badge.orcid .v { background: #263f16; color: #bef264; }
+    .cta-row { display: flex; flex-wrap: wrap; gap: 10px; margin: 16px 0 28px; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 7px; padding: 9px 15px; border-radius: 8px;
+      font-size: 13.5px; font-weight: 600; border: 1px solid var(--border-hi);
+      background: var(--surface); color: var(--text); transition: border-color 0.15s ease;
+    }
+    .btn:hover { border-color: var(--cyan); text-decoration: none; }
+    .btn.primary {
+      background: linear-gradient(135deg, #06b6d4 0%, #2563eb 100%);
+      border-color: rgba(34,211,238,0.6); color: #fff;
+    }
+    h2 {
+      margin: 34px 0 12px; font-size: 20px; font-weight: 700; letter-spacing: -0.02em;
+      border-bottom: 1px solid var(--border); padding-bottom: 8px;
+    }
+    .cert-card {
+      background: linear-gradient(135deg, rgba(16,185,129,0.09), rgba(34,211,238,0.06));
+      border: 1px solid rgba(16,185,129,0.4); border-radius: 12px; padding: 18px 20px; margin: 14px 0 20px;
+    }
+    .cert-head {
+      display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+    .cert-title { font-weight: 700; font-size: 15.5px; color: #6ee7b7; }
+    .cert-grid {
+      display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin: 12px 0;
+    }
+    @media (max-width: 820px) { .cert-grid { grid-template-columns: 1fr; } }
+    .cert-box {
+      background: rgba(7,11,20,0.65); border: 1px solid var(--border); border-radius: 9px; padding: 12px 13px;
+      font-size: 13px; color: #d7e3f6;
+    }
+    .cert-box strong { color: var(--cyan); display: block; margin-bottom: 4px; font-size: 12.5px; font-family: var(--mono); }
+    pre {
+      margin: 12px 0; padding: 13px 15px; border-radius: 9px;
+      background: #050912; border: 1px solid var(--border);
+      font-family: var(--mono); font-size: 12px; color: #d1def2; overflow-x: auto; line-height: 1.5;
+    }
+    code { font-family: var(--mono); font-size: 0.9em; color: #93c5fd; }
+    table {
+      width: 100%; border-collapse: collapse; margin: 14px 0;
+      background: var(--surface); border: 1px solid var(--border); border-radius: 10px; overflow: hidden;
+      font-size: 13.5px;
+    }
+    th, td { padding: 11px 13px; text-align: left; border-bottom: 1px solid var(--border); vertical-align: top; }
+    th {
+      background: var(--surface-2); font-family: var(--mono); font-size: 11px;
+      text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted);
+    }
+    tr:last-child td { border-bottom: none; }
+    .fig-grid {
+      display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-top: 14px;
+    }
+    @media (max-width: 820px) { .fig-grid { grid-template-columns: 1fr; } }
+    .fig-card {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 11px;
+      padding: 13px; display: flex; flex-direction: column; gap: 10px;
+    }
+    .fig-card img { width: 100%; height: auto; border-radius: 7px; background: #fff; }
+    .fig-card p { margin: 0; font-size: 13px; color: var(--muted); }
+    .note {
+      font-size: 12.5px; color: var(--muted); padding: 10px 13px; border-radius: 8px;
+      background: var(--surface); border: 1px solid var(--border); margin-top: 10px;
+    }
+    footer {
+      margin-top: 44px; padding-top: 18px; border-top: 1px solid var(--border);
+      display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap;
+      font-size: 12.5px; color: var(--dim);
+    }
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <div class="eyebrow">
+    <span class="pill">Lean 4.36.0 &middot; 66 Theorems &middot; 0 Sorry</span>
+    <span class="pill cyan">Strictly Classical Statistics &amp; Euclidean Geometry &mdash; Zero Quantum Woo</span>
+  </div>
+
+  <h1>Delayed-Choice Quantum Eraser, Post-Selection &amp; Artificial Intelligence</h1>
+  <p class="lead">
+    Three original research preprints by <strong>Fabien Pierret</strong> (Independent Researcher,
+    <a href="https://orcid.org/0009-0001-1223-2170" target="_blank" rel="noopener">ORCID 0009-0001-1223-2170</a>)
+    delineating the exact mathematical boundary between quantum post-selection and classical post-selection in
+    quantitative finance, autoregressive Large Language Models, and deep neural representations &mdash; backed by
+    <strong>66 machine-checked Lean 4 theorems</strong> (dual-agent audited), <strong>4 permanent CERN Zenodo DOIs</strong>,
+    and <strong>12 deterministic reproducible experiments</strong>.
+  </p>
+
+  <div class="meta-strip">
+    <a class="badge lean" href="https://github.com/fabien-pierret/dcqe-postselection-ai/blob/main/lean/DCQEPostSelectionCore.lean" target="_blank" rel="noopener"><span class="k">Lean 4.36</span><span class="v">66 Theorems &middot; 0 sorry</span></a>
+    <a class="badge" href="https://doi.org/10.5281/zenodo.24591062" target="_blank" rel="noopener"><span class="k">Suite v1.0</span><span class="v">10.5281/zenodo.24591062</span></a>
+    <a class="badge" href="https://doi.org/10.5281/zenodo.24591340" target="_blank" rel="noopener"><span class="k">Paper 1</span><span class="v">10.5281/zenodo.24591340</span></a>
+    <a class="badge" href="https://doi.org/10.5281/zenodo.24591378" target="_blank" rel="noopener"><span class="k">Paper 2</span><span class="v">10.5281/zenodo.24591378</span></a>
+    <a class="badge" href="https://doi.org/10.5281/zenodo.24591422" target="_blank" rel="noopener"><span class="k">Paper 3</span><span class="v">10.5281/zenodo.24591422</span></a>
+    <a class="badge orcid" href="https://orcid.org/0009-0001-1223-2170" target="_blank" rel="noopener"><span class="k">ORCID</span><span class="v">0009-0001-1223-2170</span></a>
+  </div>
+
+  <div class="cta-row">
+    <a class="btn primary" href="https://audit.wallstreetdebug.com" target="_blank" rel="noopener">Launch Live Edge Auditor (audit.wallstreetdebug.com)</a>
+    <a class="btn" href="https://github.com/fabien-pierret/dcqe-postselection-ai" target="_blank" rel="noopener">GitHub Repository (MIT)</a>
+    <a class="btn" href="https://pypi.org/project/qdsr-audit/" target="_blank" rel="noopener">pip install qdsr-audit</a>
+    <a class="btn" href="./llms.txt" target="_blank" rel="noopener">Machine-Readable llms.txt</a>
+  </div>
+
+  <h2>1. Lean 4.36.0 Machine-Checked Certificate (0 sorry, Dual-Agent Audited)</h2>
+  <div class="cert-card">
+    <div class="cert-head">
+      <div class="cert-title">&#10003; Verified Rational Algebraic Cores over &#8474; (Transferring Verbatim to &#8477;)</div>
+      <div>
+        <a href="https://github.com/fabien-pierret/dcqe-postselection-ai/blob/main/lean/DCQEPostSelectionCore.lean" target="_blank" rel="noopener"><code>lean/DCQEPostSelectionCore.lean</code></a>
+        &middot;
+        <a href="https://github.com/fabien-pierret/dcqe-postselection-ai/blob/main/lean/AUDIT_REPORT_2_AGENTS.md" target="_blank" rel="noopener"><code>lean/AUDIT_REPORT_2_AGENTS.md</code></a>
+      </div>
+    </div>
+    <p style="margin:0 0 10px; font-size:13.5px; color:#dbe7f8;">
+      Compiled cleanly with <code>leanprover/lean4:v4.36.0</code> (zero external dependencies, exit code <code>0</code>,
+      <code>0</code> warnings, <code>66 / 66</code> public theorems checked via <code>#print axioms</code> depending strictly
+      on <code>[propext, Classical.choice, Quot.sound]</code>; zero <code>sorryAx</code>, zero <code>native_decide</code>,
+      every quotient denominator proven <code>&gt; 0</code>, and explicit non-vacuity witnesses for every conditional theorem).
+      Audited by two independent adversarial agents (<em>Statement Auditor</em> + <em>Math Fidelity Referee</em>).
+    </p>
+    <div class="cert-grid">
+      <div class="cert-box">
+        <strong>Paper 1 &middot; Paper1_QDSR (20 Theorems)</strong>
+        Leading-order Fr&eacute;chet polynomial law <code>(a_quant/a_cl)&nu; = &kappa;&sup2;C</code>, scale cancellation, unboundedness past any constant <code>B</code>, Student-<code>t_3</code> witness (&gt;11.7&times;), rational Bernoulli bound, non-asymptotic collapse of C-indexed Bonferroni &amp; &Scaron;id&aacute;k (arbitrary <code>M &ge; Ck</code>) to <code>FPR &ge; 1 - &epsilon;</code>, exact <code>Q-DSR_&nu;</code> monotonicity/calibration, and heavy-tail dominance over Gaussian Q-DSR.
+      </div>
+      <div class="cert-box">
+        <strong>Paper 2 &middot; Paper2_CHSH_CbD (20 Theorems)</strong>
+        Bell&ndash;CHSH <code>|S| &le; 2</code> on finite LHV mixtures; CbD necessity <code>|S| - 2&Delta;_mismatch &le; 2</code> &amp; marginal-shift coupling bound; autoregressive Lemma 1, <code>&Delta;_0 = 2&Delta;_TV</code>, Master Absorption Identity (Eq. 5), two-sided Corollaries 1A &amp; 1B, exact M&ouml;bius Symmetrization Law derived from forward/reverse tables, plus 4 purely classical rational LLM/LHV witnesses (zero quantum physics) including a 5-row abstention detection-loophole table.
+      </div>
+      <div class="cert-box">
+        <strong>Paper 3 &middot; Paper3_SIPS_Welch (26 Theorems)</strong>
+        General <code>K &ge; 2</code> minimax blindness of every convex linear auditor + strict head-to-head separation vs. <code>SIPS_&infin;</code>; zero minimax risk &amp; full Uniqueness Theorem of <code>SIPS_&infin;</code> (with axiom-satisfiability witness); Rosenbaum odds-ratio weight bracket IFF (Eq. 6) + sharp Manski&ndash;Rosenbaum H&aacute;jek bounds with vertex attainment &amp; <code>Fin n</code> sample sum; arbitrary-dimension <code>(d, M)</code> Frobenius &amp; max-coherence Welch bounds + rational <code>2&times;4</code> UNTF saturation; arbitrary-dimension <code>d</code> spectral Jensen bound (Eq. 19, equality IFF isotropic), scalar Sherman&ndash;Morrison, <code>&rho; &le; 1</code> plateau, and strict overload SNR attenuation.
+      </div>
+    </div>
+    <pre>lean lean/DCQEPostSelectionCore.lean
+# Exit code 0 · 0 warnings · 66 / 66 public theorems checked via #print axioms:
+# exclusively [propext, Classical.choice, Quot.sound] (0 sorryAx, 0 native_decide)</pre>
+    <div class="note">
+      <strong>Exact Scope Demarcation (Zero Overclaim):</strong> Lean 4 certifies the deterministic rational algebraic cores over &#8474;
+      (ordered-field proofs transferring verbatim to &#8477;). Probabilistic asymptotics (Fisher&ndash;Tippett&ndash;Gnedenko, Probability Integral
+      Transform, Student-<code>t_&nu;</code> integrals, Slepian's inequality), KDL (2015) maximal-coupling sufficiency, clipped <code>I_col</code> (Eq. 7b),
+      matrix spectral decomposition (Eq. 18), Loewner operator monotonicity for <code>&rho; &le; 1</code>, matrix Sherman&ndash;Morrison, Markov/<code>erf</code>/Le Cam
+      bounds (Eqs. 14&ndash;16), and live <code>Qwen2.5-1.5B</code> / Monte Carlo experiments are proved analytically in the companion PDFs and reproduced deterministically in <code>sim/</code>.
+    </div>
+  </div>
+
+  <h2>2. Three CERN-Archived Preprints &amp; Verified Discoveries</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Preprint &amp; Camera-Ready PDF</th>
+        <th>CERN Zenodo DOI</th>
+        <th>Core Discovery &amp; Empirical Verification</th>
+        <th>Verification Layers</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <strong>Paper 1:</strong> Quantum Overfitting Amplification &amp; Heavy-Tail Q-DSR<sub>&nu;</sub><br />
+          <a href="./papers/Article_1_PRX_Quantum.pdf" target="_blank" rel="noopener">Download PDF (8 pp.)</a>
+        </td>
+        <td><a href="https://doi.org/10.5281/zenodo.24591340" target="_blank" rel="noopener"><code>10.5281/zenodo.24591340</code></a></td>
+        <td>Universal <code>2^{1/&alpha;}</code> sub-Weibull amplification vs. unbounded polynomial Fr&eacute;chet explosion <code>&Theta;(&kappa;^{2/&nu;} C^{1/&nu;})</code> reaching <strong>11.76&times;</strong> on Student-<code>t_3</code> at <code>C=1,000</code> (OOS = <code>-0.006</code>). Naive DSR collapses to 53.4%&ndash;100% FPR; exact <code>Q-DSR_&nu;</code> restores 4.6%&ndash;5.4% FPR at <code>&alpha;=5%</code>.</td>
+        <td>Lean 4 (20 thms) + PDF + Exp 10 (R=4,000)</td>
+      </tr>
+      <tr>
+        <td>
+          <strong>Paper 2:</strong> Contextuality&ndash;Signaling Dichotomy in Autoregressive LLMs<br />
+          <a href="./papers/Article_2_Nature_Machine_Intelligence.pdf" target="_blank" rel="noopener">Download PDF (16 pp.)</a>
+        </td>
+        <td><a href="https://doi.org/10.5281/zenodo.24591378" target="_blank" rel="noopener"><code>10.5281/zenodo.24591378</code></a></td>
+        <td>Causal-Mask Signaling-Absorption explains live <code>Qwen2.5-1.5B</code> (38/51 natural cycles breach raw <code>s_odd &gt; 2</code> yet <strong>0/51</strong> violate CbD). Exact M&ouml;bius transition yields <strong>15/15</strong> symmetrized violations (<code>M01</code> at <code>3.209 &gt; 2&radic;2</code> via purely classical KV-cache). Isolated queries obey <code>|S| &le; 2</code> (0/1,050), while benign confidence abstention (<code>&eta; &le; 95%</code>) opens a live detection loophole (<code>|S|=2.2756</code>, closed by <code>&empty; &mapsto; +1</code>).</td>
+        <td>Lean 4 (20 thms) + PDF + Exp 8, 9, 11 (&gt;74k live logits)</td>
+      </tr>
+      <tr>
+        <td>
+          <strong>Paper 3:</strong> Minimax SIPS<sub>&infin;</sub> &amp; Welch&ndash;Superposition MIA Duality<br />
+          <a href="./papers/Article_3_ICML_JMLR.pdf" target="_blank" rel="noopener">Download PDF (14 pp.)</a>
+        </td>
+        <td><a href="https://doi.org/10.5281/zenodo.24591422" target="_blank" rel="noopener"><code>10.5281/zenodo.24591422</code></a></td>
+        <td>Every convex linear auditor suffers minimax risk <code>R_max = 1</code> across orthogonal failure manifolds (min oracle risk &ge; 0.90 across 500 Dirichlet weights vs. <code>0.00</code> for the unique minimax-optimal <code>SIPS_&infin;</code>), coupled with sharp Manski&ndash;Rosenbaum bounds (err <code>2.22e-16</code> vs. LP) and closed-form Welch&ndash;MIA coupling (<code>-59.4%</code> MIA leakage on ReLU AEs, <code>V_AI&sup2; + D_MIA&sup2; &le; 0.9313 &le; 1</code>).</td>
+        <td>Lean 4 (26 thms) + PDF + Exp 4, 12</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>3. Key 300-DPI Verification Figures</h2>
+  <div class="fig-grid">
+    <div class="fig-card">
+      <img src="./figures/fig10_quantum_overfitting_amplification_law.png" alt="Paper 1 Heavy-Tail Quantum Overfitting Amplification Law and Q-DSR_nu" loading="lazy" />
+      <p><strong>Figure 10 (Paper 1):</strong> Sub-Weibull constant amplification vs. Student-<code>t_3</code> polynomial explosion (11.76&times; at C=1,000, OOS = 0), C-indexed FPR collapse restored by exact <code>Q-DSR_&nu;</code>, and Landauer 2&times; measurement/reset bound.</p>
+    </div>
+    <div class="fig-card">
+      <img src="./figures/fig11_autoregressive_frustration_transition.png" alt="Paper 2 Autoregressive Mobius Transition, Detection Loophole, and Effective Multiplicity" loading="lazy" />
+      <p><strong>Figure 11 (Paper 2):</strong> Live <code>Qwen2.5-1.5B</code> M&ouml;bius frustration transition (0/51 natural vs. 15/15 symmetrized), real-LLM confidence-abstention detection loophole closed by <code>&empty; &mapsto; +1</code>, and spectral <code>M_eff</code> ordering.</p>
+    </div>
+    <div class="fig-card">
+      <img src="./figures/fig12_sips_minimax_and_mia_duality.png" alt="Paper 3 SIPS_infinity Minimax Impossibility and Welch-Superposition MIA Duality" loading="lazy" />
+      <p><strong>Figure 12 (Paper 3):</strong> Minimax failure of 500 Dirichlet linear aggregators vs. 0.00 risk of <code>SIPS_&infin;</code>, Manski&ndash;Rosenbaum partial-ID band, and ReLU autoencoder Welch&ndash;MIA privacy duality (<code>V_AI&sup2; + D_MIA&sup2; &le; 1</code>).</p>
+    </div>
+    <div class="fig-card">
+      <img src="./figures/fig9_real_llm_cbd_signaling.png" alt="Paper 2 Live Qwen2.5-1.5B Isolated CHSH and 36-Cycle CbD Signaling Absorption" loading="lazy" />
+      <p><strong>Figure 9 (Paper 2):</strong> Live <code>Qwen2.5-1.5B</code> isolated CHSH invariance (0/1,050 violations at <code>&eta; = 1</code>) vs. 27/36 multi-turn raw excesses fully absorbed by KV-cache signaling <code>&Delta;_0</code> (0/36 CbD violations).</p>
+    </div>
+  </div>
+
+  <h2>4. Quickstart &amp; Deterministic Replication</h2>
+  <pre>git clone https://github.com/fabien-pierret/dcqe-postselection-ai.git
+cd dcqe-postselection-ai
+
+# 1. Machine-check all 66 Lean 4.36.0 theorems (~5s, zero dependencies)
+lean lean/DCQEPostSelectionCore.lean
+
+# 2. Reproduce CPU statistical &amp; theoretical benchmarks (Exp 1-7, 10, 12)
+python3 -m venv .venv &amp;&amp; source .venv/bin/activate
+pip install -r requirements.txt
+python3 sim/exp10_paper1_quantum_overfitting_heavy_tails.py &amp;&amp; python3 sim/exp12_paper3_duality_and_sips_minimax.py
+
+# 3. Install the standalone open-source Python auditor from PyPI
+pip install qdsr-audit</pre>
+
+  <footer>
+    <div>
+      <strong>Fabien Pierret</strong> &middot;
+      <a href="https://orcid.org/0009-0001-1223-2170" target="_blank" rel="noopener">ORCID 0009-0001-1223-2170</a> &middot;
+      <a href="https://github.com/fabien-pierret/dcqe-postselection-ai" target="_blank" rel="noopener">GitHub</a> &middot;
+      <a href="./llms.txt">llms.txt</a>
+    </div>
+    <div>
+      WallStreetDebug Ecosystem:
+      <a href="https://wallstreetdebug.com" target="_blank" rel="noopener">wallstreetdebug.com</a> &middot;
+      <a href="https://audit.wallstreetdebug.com" target="_blank" rel="noopener">audit.wallstreetdebug.com</a> &middot;
+      <a href="https://evolve.wallstreetdebug.com" target="_blank" rel="noopener">evolve.wallstreetdebug.com</a>
+    </div>
+  </footer>
+</div>
+</body>
+</html>
