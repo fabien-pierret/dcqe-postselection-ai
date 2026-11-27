@@ -4,9 +4,26 @@ type: software
 title: "Delayed-Choice Quantum Eraser, Post-Selection, and Artificial Intelligence: Theoretical Proofs and Reproducible Verification Suite"
 version: "1.0.0"
 date-released: "2026-11-27"
+doi: "10.5281/zenodo.24591062"
 license: "MIT"
 repository-code: "https://github.com/fabien-pierret/dcqe-postselection-ai"
-url: "https://github.com/fabien-pierret/dcqe-postselection-ai"
+url: "https://doi.org/10.5281/zenodo.24591062"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.24591062"
+    description: "Zenodo software archive (v1.0.0)"
+  - type: doi
+    value: "10.5281/zenodo.24591061"
+    description: "Zenodo concept DOI (all versions)"
+  - type: doi
+    value: "10.5281/zenodo.24591340"
+    description: "Preprint 1: Quantum Overfitting Amplification Theorem and Q-DSR_nu"
+  - type: doi
+    value: "10.5281/zenodo.24591378"
+    description: "Preprint 2: Contextuality-Signaling Dichotomy in Autoregressive LLMs"
+  - type: doi
+    value: "10.5281/zenodo.24591422"
+    description: "Preprint 3: Minimax SIPS_infinity and Welch-Superposition MIA Duality"
 authors:
   - family-names: "Pierret"
     given-names: "Fabien"

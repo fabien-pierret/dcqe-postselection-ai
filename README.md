@@ -1,7 +1,14 @@
 # Delayed-Choice Quantum Eraser, Post-Selection, and Artificial Intelligence: Theoretical Foundations & Reproducible Verification Suite
 
+[![Code & Suite DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24591062.svg)](https://doi.org/10.5281/zenodo.24591062)
+[![Paper 1 DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24591340.svg)](https://doi.org/10.5281/zenodo.24591340)
+[![Paper 2 DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24591378.svg)](https://doi.org/10.5281/zenodo.24591378)
+[![Paper 3 DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24591422.svg)](https://doi.org/10.5281/zenodo.24591422)
+[![ORCID](https://img.shields.io/badge/ORCID-0009--0001--1223--2170-A6CE39.svg)](https://orcid.org/0009-0001-1223-2170)
+
 **Author:** Fabien Pierret (`Independent Researcher`)  
 **ORCID:** [0009-0001-1223-2170](https://orcid.org/0009-0001-1223-2170)  
+**Zenodo Software Archive DOI:** [10.5281/zenodo.24591062](https://doi.org/10.5281/zenodo.24591062) *(Concept DOI: `10.5281/zenodo.24591061`)*  
 **License:** MIT (code & scripts) / CC BY 4.0 (preprints & figures)
 
 ---
@@ -12,18 +19,18 @@ This repository provides the complete, self-contained, deterministic verificatio
 
 ### 1. Preprints (`papers/`)
 
-1. **Paper 1 (*PRX Quantum* / *Quantum* / *NeurIPS* track)** — [`papers/Article_1_PRX_Quantum.pdf`](./papers/Article_1_PRX_Quantum.pdf)  
+1. **Paper 1 (*PRX Quantum* / *Quantum* / *NeurIPS* track)** — [`papers/Article_1_PRX_Quantum.pdf`](./papers/Article_1_PRX_Quantum.pdf) · **Preprint DOI:** [10.5281/zenodo.24591340](https://doi.org/10.5281/zenodo.24591340)  
    *The Quantum Overfitting Amplification Theorem and Heavy-Tail Quantum-Adjusted Deflated Sharpe Ratio ($\mathrm{Q\text{-}DSR}_\nu$)*  
    - Proves that under fixed oracle query budget $C$ on frozen null data, quadratic quantum search (Grover / Dürr–Høyer) amplifies false in-sample discoveries by the universal factor **$2^{1/\alpha}$** for sub-Weibull tails ($\sqrt{2}$ Gaussian, $2$ Laplace) and triggers an unbounded **polynomial explosion $\Theta(\kappa^{2/\nu} C^{1/\nu})$** under Fréchet heavy tails (reaching **$11.76\times$** at $C = 1{,}000$ for Student-$t_3$), while leaving out-of-sample expectation identically zero.
    - Derives the closed-form heavy-tail **$\mathrm{Q\text{-}DSR}_\nu$** restoring exact $\mathrm{FPR} = \alpha$ (vs. $53.4\%\text{--}100\%$ failure of $C$-indexed DSR and $56.9\%$ failure of naive participation-ratio discounting), together with the Landauer $2\times$ thermodynamic selection dissipation bound.
 
-2. **Paper 2 (*Nature Machine Intelligence* / *PRX Quantum* / *NeurIPS* track)** — [`papers/Article_2_Nature_Machine_Intelligence.pdf`](./papers/Article_2_Nature_Machine_Intelligence.pdf)  
+2. **Paper 2 (*Nature Machine Intelligence* / *PRX Quantum* / *NeurIPS* track)** — [`papers/Article_2_Nature_Machine_Intelligence.pdf`](./papers/Article_2_Nature_Machine_Intelligence.pdf) · **Preprint DOI:** [10.5281/zenodo.24591378](https://doi.org/10.5281/zenodo.24591378)  
    *The Contextuality–Signaling Dichotomy in Autoregressive Large Language Models: Causal-Mask Absorption, Semantic Frustration Phase Transition, and Correlated Effective Multiplicity*  
    - Proves the **Causal-Mask Signaling-Absorption Theorem** (explaining live `Qwen2.5-1.5B-Instruct` results: **38/51** natural multi-turn cycles breach raw $s_{\text{odd}} > 2$ up to $3.487$, yet **0/51** violate Contextuality-by-Default after subtracting KV-cache signaling $\Delta_0$, $\max C_{\text{CbD}} = 1.9997$).
    - Proves the exact IFF **Möbius Frustration Phase Transition** and **Symmetrization Law** $\Delta_0^{\text{sym}} = \max(|m_1|, |m_3|) + \max(|m_2|, |m_4|) \le 2$, validated live on frozen `Qwen2.5-1.5B-Instruct` weights (`SHA-256` invariant, $\|\Delta\theta^*\|_2 = 0$): balanced Möbius cycle `M01` reaches $C_{\text{CbD}} = 2.959$ (forward), $3.043$ (reverse), and $3.209$ (symmetrized, surpassing Tsirelson's $2\sqrt{2}$ purely via classical KV-cache access), with **15/15 (100%)** symmetrized Möbius cycles crossing $C_{\text{CbD}} > 2$.
    - Demonstrates live on isolated LLM logits ($0/1{,}050$ violations at $\eta = 1$) that even **benign confidence-threshold abstention ($\eta \le 95\%$)** opens a real-LLM **detection loophole** ($|S| = 2.2756$, closed back to $\le 1.7783$ via deterministic $\emptyset \mapsto +1$ imputation), and proves the universal spectral multiplicity ordering $1 \le M_{\text{eff}}^{\text{PR}} \le M_{\text{eff}}^{\text{Galwey}} \le M$ reducing live prompt-dredging optimism MAE by $2.65\times\text{--}2.79\times$.
 
-3. **Paper 3 (*ICML* / *JMLR* / *Nature Machine Intelligence* track)** — [`papers/Article_3_ICML_JMLR.pdf`](./papers/Article_3_ICML_JMLR.pdf)  
+3. **Paper 3 (*ICML* / *JMLR* / *Nature Machine Intelligence* track)** — [`papers/Article_3_ICML_JMLR.pdf`](./papers/Article_3_ICML_JMLR.pdf) · **Preprint DOI:** [10.5281/zenodo.24591422](https://doi.org/10.5281/zenodo.24591422)  
    *Minimax Impossibility of Linear Post-Selection Auditors ($\mathrm{SIPS}_\infty$) and Analytical Welch–Superposition Coupling to Membership Inference Attacks ($V_{\mathrm{AI}}^2 + D_{\mathrm{MIA}}^2 \le 1$)*  
    - Proves that over $K$ orthogonal post-selection failure manifolds, **every** convex linear aggregator $\sum_k w_k I_k$ suffers minimax risk $R_{\max} = 1$ (confirmed across 500 Dirichlet weights: min oracle risk $\ge 0.90$ vs. $0.00$ for the unique minimax-optimal $\ell_\infty$ auditor $\mathrm{SIPS}_\infty$), coupled with closed-form **Manski–Rosenbaum** partial-identification bounds verified to $2.22 \times 10^{-16}$ against Charnes–Cooper linear programming.
    - Derives the first closed-form analytical coupling between neural geometric superposition overload $\rho = M/d$ (Welch bound) and white-box Bayes-optimal Membership Inference Attack advantage $D_{\mathrm{MIA}}$ via Loewner monotonicity, Sherman–Morrison rank-one updates ($3.55 \times 10^{-15}$ error), strict spectral concavity, and Le Cam–Bhattacharyya duality—validated on Adam-trained ReLU autoencoders ($-59.4\%$ MIA leakage reduction, $V_{\mathrm{AI}}^2 + D_{\mathrm{MIA}}^2 \le 0.9313 \le 1$).
@@ -110,6 +117,9 @@ If you use this codebase, figures, or theoretical results in your research, plea
   title        = {Delayed-Choice Quantum Eraser, Post-Selection, and Artificial Intelligence: Theoretical Proofs and Reproducible Verification Suite},
   year         = {2026},
   version      = {1.0.0},
+  publisher    = {Zenodo},
+  doi          = {10.5281/zenodo.24591062},
+  url          = {https://doi.org/10.5281/zenodo.24591062},
   license      = {MIT},
   note         = {ORCID: 0009-0001-1223-2170}
 }
