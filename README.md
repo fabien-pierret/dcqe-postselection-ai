@@ -1,5 +1,7 @@
 # Delayed-Choice Quantum Eraser, Post-Selection, and Artificial Intelligence: Theoretical Foundations & Reproducible Verification Suite
 
+[![Lean 4.36](https://img.shields.io/badge/Lean_4.36-66_Theorems_·_0_sorry-10B981.svg)](./lean/DCQEPostSelectionCore.lean)
+[![Dual-Agent Audit](https://img.shields.io/badge/Formal_Audit-2_Independent_Agents-0EA5E9.svg)](./lean/AUDIT_REPORT_2_AGENTS.md)
 [![Code & Suite DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24591062.svg)](https://doi.org/10.5281/zenodo.24591062)
 [![Paper 1 DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24591340.svg)](https://doi.org/10.5281/zenodo.24591340)
 [![Paper 2 DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24591378.svg)](https://doi.org/10.5281/zenodo.24591378)
@@ -8,8 +10,11 @@
 
 **Author:** Fabien Pierret (`Independent Researcher`)  
 **ORCID:** [0009-0001-1223-2170](https://orcid.org/0009-0001-1223-2170)  
+**Research Showcase (GitHub Pages · AEO/JSON-LD):** [https://fabien-pierret.github.io/dcqe-postselection-ai/](https://fabien-pierret.github.io/dcqe-postselection-ai/) (`llms.txt` included)  
+**Live Edge Auditor:** [https://audit.wallstreetdebug.com](https://audit.wallstreetdebug.com) · **PyPI Package:** [`pip install qdsr-audit`](https://pypi.org/project/qdsr-audit/)  
+**WallStreetDebug Ecosystem:** [Hub (`wallstreetdebug.com`)](https://wallstreetdebug.com) · [EvolveGuard (`evolve.wallstreetdebug.com`)](https://evolve.wallstreetdebug.com)  
 **Zenodo Software Archive DOI:** [10.5281/zenodo.24591062](https://doi.org/10.5281/zenodo.24591062) *(Concept DOI: `10.5281/zenodo.24591061`)*  
-**License:** MIT (code & scripts) / CC BY 4.0 (preprints & figures)
+**License:** MIT (code, Lean 4 proofs & scripts) / CC BY 4.0 (preprints & figures)
 
 ---
 
@@ -37,6 +42,23 @@ This repository provides the complete, self-contained, deterministic verificatio
 
 ---
 
+## Machine-Checked Lean 4.36.0 Certificate (`lean/`, 0 `sorry`, Dual-Agent Audited)
+
+[`lean/DCQEPostSelectionCore.lean`](./lean/DCQEPostSelectionCore.lean) (`leanprover/lean4:v4.36.0`, zero external dependencies) formally verifies **66 public theorems** (`66 / 66` checked via `#print axioms`, depending exclusively on `[propext, Classical.choice, Quot.sound]`; zero `sorryAx`, zero `native_decide`, zero custom axioms; every quotient denominator proven `> 0`; explicit non-vacuity witnesses for every conditional theorem), audited by two independent read-only agents in [`lean/AUDIT_REPORT_2_AGENTS.md`](./lean/AUDIT_REPORT_2_AGENTS.md).
+
+**Exact Audited Scope (Deterministic Rational Algebraic Cores over $\mathbb{Q}$, transferring verbatim to $\mathbb{R}$; zero overclaim, zero *quantum woo*):**
+- **Paper 1 (`Paper1_QDSR`, 20 theorems):** Leading-order Fréchet polynomial law $(a_{\text{quant}}/a_{\text{cl}})^\nu = \kappa^2 C$, scale cancellation, unbounded growth past any constant $B$, Student-$t_3$ leading-asymptotic witness ($> 11.7\times$ at $C=1{,}000$; exact Eq. 8 value $\approx 11.747\times$), exact rational Bernoulli contraction $(1+nu)(1-u)^n \le 1$, non-asymptotic collapse of both $C$-indexed Bonferroni ($M \ge kC$) and $C$-indexed Šidák ($M \ge Ck$, arbitrary non-multiples) to $\mathrm{FPR} \ge 1 - \varepsilon$, exact $\mathrm{Q\text{-}DSR}_\nu$ monotonicity/calibration, and strict heavy-tail under-coverage of Gaussian $\mathrm{Q\text{-}DSR}$.
+- **Paper 2 (`Paper2_CHSH_CbD`, 20 theorems):** Bell–CHSH $|S| \le 2$ on $\{-1,+1\}^4$ and arbitrary finite LHV mixtures; necessity direction of Contextuality-by-Default $|S| - 2\Delta_{\text{mismatch}} \le 2$ on finite couplings plus $|E[X] - E[Y]| \le 2 P(X \neq Y)$; autoregressive causal-mask Lemma 1, exact $\Delta_0 = 2\Delta_{\text{TV}}$, Master Signaling-Absorption Identity (Eq. 5), two-sided Corollaries 1A ($\delta = 0 \Rightarrow |S| - 2\Delta_{\text{TV}} \le 2$) & 1B (edgewise signaling dominance); exact Möbius Symmetrization Law ($S^{\text{sym}} = 4$, $\Delta_0^{\text{sym}} = \max(|m_1|,|m_3|)+\max(|m_2|,|m_4|) < 2$) derived directly from forward/reverse probability tables; plus 4 purely classical rational LLM/LHV witnesses (including a 5-row classical LHV abstention table hitting $S_{\text{post}} = 10/3 > 2\sqrt{2}$ yet closing back to $\le 2$ under $\emptyset \mapsto +1$ imputation).
+- **Paper 3 (`Paper3_SIPS_Welch`, 26 theorems):** General $K \ge 2$ minimax blindness of every convex linear auditor ($\delta/K \le \varepsilon_0 < \delta$) + strict head-to-head separation vs. $\mathrm{SIPS}_\infty$; zero minimax risk & full Uniqueness Theorem of $\mathrm{SIPS}_\infty$ (with machine-checked axiom satisfiability); Rosenbaum odds-ratio weight bracket IFF (Eq. 6) + sharp Manski–Rosenbaum Hájek IPSW bounds with vertex attainment & `Fin n` sample summation; arbitrary-dimension $(d, M)$ Frobenius–Welch bound $\|W^\top W\|_F^2 \ge M^2/d$, off-diagonal cross-talk $M(M-d)/d$, quantitative max-coherence Welch bound $(M-d)/(d(M-1))$, impossibility of orthogonality for $M > d$, and exact $2\times 4$ rational UNTF saturation; arbitrary-dimension $d$ spectral Jensen concavity bound (Eq. 19, equality IFF isotropic $\lambda_\ell = M/d$), scalar Sherman–Morrison, $\rho \le 1$ orthonormal SNR plateau, and strict overload SNR attenuation for $\rho \ge 1$.
+
+*Demarcation:* Probabilistic asymptotics (Fisher–Tippett–Gnedenko, Probability Integral Transform, Student-$t_\nu$ tail integrals, Slepian), KDL (2015) maximal-coupling sufficiency, clipped $I_{\text{col}}$ (Eq. 7b), matrix spectral decomposition (Eq. 18), Loewner operator monotonicity for $\rho \le 1$, matrix Sherman–Morrison, Markov/$\mathrm{erf}$/Le Cam bounds (Eqs. 14–16), and the 12 Python/MLX benchmarks are proved analytically in `papers/*.pdf` and reproduced deterministically in `sim/`.
+
+```bash
+lean lean/DCQEPostSelectionCore.lean
+```
+
+---
+
 ## Repository Structure
 
 ```text
@@ -44,9 +66,15 @@ This repository provides the complete, self-contained, deterministic verificatio
 ├── README.md
 ├── CITATION.cff
 ├── LICENSE
+├── llms.txt                                      # Machine-readable AEO specification
 ├── requirements.txt
 ├── .gitignore
 ├── colab_gpu_suite.ipynb                         # Google Colab GPU (T4/A100) replication notebook
+├── lean/                                         # Zero-dependency Lean 4.36.0 machine-checked proofs
+│   ├── lean-toolchain                            # leanprover/lean4:v4.36.0
+│   ├── DCQEPostSelectionCore.lean                # 66 public theorems, 0 sorry, standard axioms only
+│   └── AUDIT_REPORT_2_AGENTS.md                  # Dual independent agent audit record
+├── docs_site/                                    # GitHub Pages SEO/AEO showcase (index.html, llms.txt, robots.txt)
 ├── papers/                                       # Camera-ready English PDFs (Fabien Pierret)
 │   ├── Article_1_PRX_Quantum.pdf
 │   ├── Article_2_Nature_Machine_Intelligence.pdf

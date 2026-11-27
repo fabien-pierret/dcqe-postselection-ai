@@ -1,0 +1,37 @@
+# DCQE, Post-Selection & AI — Theoretical Foundations, Lean 4 Proofs & Reproducible Suite
+
+> Author: Fabien Pierret (Independent Researcher, ORCID: 0009-0001-1223-2170)
+> Live Edge Auditor: https://audit.wallstreetdebug.com
+> Live Auditor Machine Spec: https://audit.wallstreetdebug.com/llms.txt
+> GitHub Repository (MIT / CC BY 4.0): https://github.com/fabien-pierret/dcqe-postselection-ai
+> GitHub Pages Research Showcase: https://fabien-pierret.github.io/dcqe-postselection-ai/
+> Companion Ecosystem: https://wallstreetdebug.com | https://evolve.wallstreetdebug.com | https://pypi.org/project/qdsr-audit/
+
+## Permanent CERN Zenodo DOIs
+
+- Software Suite v1.0.0 (MIT): https://doi.org/10.5281/zenodo.24591062 (Concept: 10.5281/zenodo.24591061)
+- Paper 1 — Heavy-Tail Quantum Overfitting Amplification & Q-DSR_nu (CC BY 4.0): https://doi.org/10.5281/zenodo.24591340
+- Paper 2 — Contextuality-Signaling Dichotomy in Autoregressive LLMs (CC BY 4.0): https://doi.org/10.5281/zenodo.24591378
+- Paper 3 — Minimax SIPS_infinity & Welch-Superposition MIA Duality (CC BY 4.0): https://doi.org/10.5281/zenodo.24591422
+
+## Machine-Checked Lean 4.36.0 Certificate (0 sorry, Dual-Agent Audited)
+
+- File: https://github.com/fabien-pierret/dcqe-postselection-ai/blob/main/lean/DCQEPostSelectionCore.lean
+- Dual Independent Agent Audit Record: https://github.com/fabien-pierret/dcqe-postselection-ai/blob/main/lean/AUDIT_REPORT_2_AGENTS.md
+- Toolchain: leanprover/lean4:v4.36.0 (zero external dependencies; verify via `lean lean/DCQEPostSelectionCore.lean`)
+- Verified Count: 66 machine-checked public theorems (66/66 `#print axioms` checks depend exclusively on `[propext, Classical.choice, Quot.sound]`; zero `sorryAx`, zero `native_decide`, zero custom axioms; every quotient denominator explicitly proven `> 0`; explicit non-vacuity witnesses for every conditional theorem).
+- Exact Audited Scope (Deterministic Rational Algebraic Cores over Q transferring verbatim to R; zero overclaim, zero quantum woo):
+  1. Paper 1 (`Paper1_QDSR`, 20 theorems): Leading-order Frechet polynomial amplification `(a_quant/a_cl)^nu = kappa^2 * C`, constant cancellation, unbounded growth past any constant `B`, Student-t_3 leading-asymptotic witness `> 11.7x` at `C = 1000` (exact asymptotic `(4/pi)^(2/3) * 1000^(1/3) ~ 11.747x`), exact rational Bernoulli contraction `(1 + n*u)*(1 - u)^n <= 1`, non-asymptotic collapse of both C-indexed Bonferroni (`M >= k*C`) and C-indexed Sidak (`M >= C*k`, non-multiples included) to `FPR >= 1 - eps`, exact `Q-DSR_nu` monotonicity/calibration, and strict heavy-tail under-coverage of Gaussian Q-DSR.
+  2. Paper 2 (`Paper2_CHSH_CbD`, 20 theorems): Bell-CHSH `|S| <= 2` on `{-1,+1}^4` and arbitrary finite LHV mixtures; necessity direction of Contextuality-by-Default `|S| - 2*Delta_mismatch <= 2` on arbitrary finite couplings plus `|E[X] - E[Y]| <= 2*P(X != Y)`; autoregressive causal-mask Lemma 1, `Delta_0 = 2*Delta_TV`, Master Signaling-Absorption Identity (Eq. 5), two-sided Corollaries 1A (`delta = 0 => |S| - 2*Delta_TV <= 2`) and 1B (edgewise signaling dominance); exact Mobius Symmetrization Law (`S^sym = 4`, `Delta_0^sym = max(|m1|,|m3|) + max(|m2|,|m4|) < 2`, `C_CbD^sym > 2`) derived directly from 50/50 forward-reverse probability tables; and 4 purely classical rational LLM/LHV witnesses (zero quantum physics): pure signaling mirage (`|S| = 4`, absorbed to `2`), classical Mobius KV-cache witness beating Tsirelson (`|S| = 16/5 = 3.2`, `(16/5)^2 > 8`), polarized directed-absorbed vs. symmetrized-contextual flip, and 5-row classical LHV abstention table (`eta_single = 4/5`, `S_post = 10/3 > 2*sqrt(2)`, closed back to `<= 2` by `0 -> +1` imputation).
+  3. Paper 3 (`Paper3_SIPS_Welch`, 26 theorems): General `K >= 2` minimax impossibility of EVERY convex linear auditor (`delta/K <= eps0 < delta`) + strict head-to-head adversarial separation against `SIPS_infinity`; zero minimax risk and full Uniqueness Theorem of `SIPS_infinity` (with machine-checked axiom satisfiability); exact Rosenbaum odds-ratio weight bracket IFF (Eq. 6) + sharp Manski-Rosenbaum Hajek IPSW bounds with vertex attainment and `Fin n` sample summation; arbitrary-dimension `(d, M)` Frobenius-Welch bound `||W^T W||_F^2 >= M^2/d`, off-diagonal cross-talk `M(M-d)/d`, quantitative max-coherence Welch floor `(M-d)/(d(M-1))`, impossibility of orthogonality for `M > d`, and rational `2x4` UNTF saturation witness; arbitrary-dimension `d` spectral Jensen concavity bound (Eq. 19) with exact equality iff isotropic `lambda_l = M/d`, scalar Sherman-Morrison identity, `rho <= 1` orthonormal SNR plateau, and strict overload SNR attenuation for `rho >= 1`.
+- Demarcation (Proved Analytically in PDFs & Verified Empirically in `sim/`): Probabilistic asymptotics (Fisher-Tippett-Gnedenko convergence, i.i.d. max-CDF / Probability Integral Transform, Student-t_nu vs. Gaussian tail integrals, Slepian Gaussian inequality), KDL (2015) maximal-coupling sufficiency, clipped `I_col` mapping (Paper 3 Eq. 7b), matrix spectral decomposition (Eq. 18), Loewner operator monotonicity for `rho <= 1`, matrix Sherman-Morrison, Markov/`erf`/Le Cam-Bhattacharyya bounds (Eqs. 14-16), and 12 deterministic Python/MLX experiments (including >74,000 exact logit forward passes on frozen Qwen2.5-1.5B weights).
+
+## Epistemic Boundary (Zero Quantum Woo)
+
+All finance, statistical auditing, LLM dialogue, and neural superposition bounds are strictly classical probability, causal inference, and Euclidean geometry in `R^d`. No physical entanglement, Bell nonlocality, or retrocausality is attributed to classical silicon AI systems.
+
+## Key Empirical Results (Deterministic `GLOBAL_SEED = 42`, `sim/`)
+
+- Paper 1 (Exp 10, R = 4,000, C = 1,000): Student-t_3 amplification reaches 11.76x (theory 11.75x) with OOS mean -0.006; C-indexed DSR collapses to 53.4%-100% FPR; exact `Q-DSR_nu` restores 4.6%-5.4% FPR at alpha = 5%.
+- Paper 2 (Exp 8, 9, 11, live frozen Qwen2.5-1.5B-Instruct-4bit): 38/51 natural multi-turn cycles breach raw `s_odd > 2` (up to 3.487) yet 0/51 violate CbD (`max C_CbD = 1.9997`); balanced Mobius cycle `M01` reaches `C_CbD = 2.959 / 3.043 / 3.209` (15/15 symmetrized > 2); isolated queries obey `|S| <= 2` (0/1,050 violations at `eta = 1`), while confidence abstention (`eta <= 95%`) opens a live detection loophole (`|S| = 2.2756`, closed to `<= 1.7783` by `0 -> +1`).
+- Paper 3 (Exp 4, 12): Across 500 Dirichlet linear weights, min oracle minimax risk >= 0.90 vs 0.00 for `SIPS_infinity`; Manski-Rosenbaum closed-form bounds match Charnes-Cooper LP to `2.22e-16`; Adam-trained ReLU autoencoders reduce empirical MIA leakage by -59.4% (`0.858 -> 0.348`) while obeying `V_AI^2 + D_MIA^2 <= 0.9313 <= 1`.
