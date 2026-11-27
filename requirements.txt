@@ -1,0 +1,8 @@
+numpy>=1.26.0
+scipy>=1.11.0
+matplotlib>=3.8.0
+scikit-learn>=1.4.0
+
+# Optional: Apple Silicon (macOS ARM64) Metal GPU packages for live LLM experiments (Exp 8, 9, 11)
+# mlx>=0.20.0
+# mlx-lm>=0.20.0

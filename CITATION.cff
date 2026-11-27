@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+message: "If you use this software, benchmark suite, or accompanying preprints, please cite it as below."
+type: software
+title: "Delayed-Choice Quantum Eraser, Post-Selection, and Artificial Intelligence: Theoretical Proofs and Reproducible Verification Suite"
+version: "1.0.0"
+date-released: "2026-11-27"
+license: "MIT"
+repository-code: "https://github.com/fabien-pierret/dcqe-postselection-ai"
+url: "https://github.com/fabien-pierret/dcqe-postselection-ai"
+authors:
+  - family-names: "Pierret"
+    given-names: "Fabien"
+    orcid: "https://orcid.org/0009-0001-1223-2170"
+    affiliation: "Independent Researcher"
+keywords:
+  - delayed-choice quantum eraser
+  - post-selection
+  - quantum overfitting amplification
+  - deflated sharpe ratio
+  - contextuality-by-default
+  - large language models
+  - minimax auditing
+  - neural superposition
+  - membership inference attacks
+abstract: >-
+  Complete deterministic verification suite (12 experiments, 10 Python scripts,
+  9 raw JSON archives, 12 publication-grade figures, and Google Colab GPU notebook)
+  accompanying three original research articles on Quantum Overfitting Amplification
+  and Q-DSR_nu, the Contextuality-Signaling Dichotomy in Autoregressive LLMs, and
+  Minimax Post-Selection Auditing (SIPS_infinity) with Welch-Superposition Membership
+  Inference Duality.
